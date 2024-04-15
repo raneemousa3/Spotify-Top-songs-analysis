@@ -1,38 +1,4 @@
-"""from flask import Flask, redirect, request
-import requests
-import random
-import string
 
-app = Flask(__name__)
-
-client_id = '4e2fc400f8134ab8bfc2419892d7d938'
-redirect_uri = 'http://localhost:5000/callback'
-client_secret='83e605412e9841a2831ac765eb1d499c'
-def generate_random_string(length):
-    letters_and_digits = string.ascii_letters + string.digits
-    return ''.join(random.choice(letters_and_digits) for i in range(length))
-
-@app.route('/login')
-def login():
-    state = generate_random_string(16)
-    scope = 'user-read-private user-read-email'
-
-    params = {
-        'response_type': 'code',
-        'client_id': client_id,
-        'client_secret':client_secret,
-        'scope': scope,
-        'redirect_uri': redirect_uri,
-        'state': state
-    }
-
-    spotify_authorize_url = 'https://accounts.spotify.com/authorize'
-    authorization_url = spotify_authorize_url + '?' + '&'.join([f'{key}={value}' for key, value in params.items()])
-    
-    return redirect(authorization_url)
-
-if __name__ == '__main__':
-    app.run()"""
 from dotenv import load_dotenv
 import os
 import json
