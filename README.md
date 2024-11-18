@@ -1,71 +1,75 @@
-# Spotify-Top-songs-analysis
-Analyzing the users top songs and recommending new songs and artists
+ChatGPT
+🎧 Spotify Top Songs Analysis
+🌟 Overview
+Spotify Top Songs Analysis is a web application that helps users analyze their favorite Spotify tracks and discover personalized recommendations for songs and artists. Using the Spotify API, the app visualizes audio features like danceability, energy, and valence, enabling users to explore their musical preferences and find new favorites!
 
-
-
-Spotify Music Analysis App
-Overview
-This application allows users to analyze their top songs on Spotify and discover new music recommendations based on audio features. It fetches the user's top tracks using the Spotify API, analyzes audio features such as danceability, energy, valence, and acousticness, and then provides personalized song and artist recommendations.
-
-Features
-Extracts user's top songs from Spotify, including audio features.
-Visualizes audio features with bar charts.
-Provides personalized song recommendations based on the user's music preferences.
-Suggests artists based on the genres of the user's top songs.
-Requirements
+✨ Features
+🎵 Retrieve and visualize your top Spotify tracks and audio features.
+🧠 Personalized Recommendations for songs based on your preferences.
+🎤 Discover Artists tailored to the genres of your favorite tracks.
+🛠️ Technologies
+Backend: Python, Spotipy (Spotify API)
+Frontend: Streamlit
+Data Processing: Pandas
+Environment Management: Python-dotenv
+⚙️ Requirements
 To run this application, you'll need:
 
 Python 3.x
-spotipy for Spotify API interactions
-streamlit for the web interface
-pandas for data manipulation
-python-dotenv for environment variable management
-You can install the required libraries using pip:
-
+Required Libraries:
 bash
 Copy code
 pip install spotipy streamlit pandas python-dotenv
-Setup
-Spotify API Credentials:
-
-Create a Spotify Developer account and create an application to obtain your CLIENT_ID and CLIENT_SECRET.
-Set the redirect URI to http://localhost:5100 in your Spotify Developer Dashboard.
-Environment Variables:
-
-Create a .env file in the project directory with the following content:
-makefile
+🚀 Setup
+1️⃣ Spotify API Credentials
+Create a Spotify Developer account and set up an application.
+Obtain your CLIENT_ID and CLIENT_SECRET.
+Set the redirect URI in your Spotify Developer Dashboard to:
+arduino
 Copy code
-CLIENT_ID=your_client_id
-CLIENT_SECRET=your_client_secret
-Dataset:
-
-Place your dataset CSV file in the specified path (/Users/raneemmousa/Desktop/openavenues/Create playlist/dataset.csv). The CSV should contain the necessary columns, including track_name, artists, and track_genre.
-Usage
-Run the Application: Start the Streamlit app by running the following command in your terminal:
+http://localhost:5100
+2️⃣ Environment Variables
+Create a .env file in the project directory.
+Add the following credentials to the .env file:
+plaintext
+Copy code
+CLIENT_ID=your_client_id  
+CLIENT_SECRET=your_client_secret  
+📝 Usage
+▶️ Run the Application
+Start the Streamlit app by running:
 
 bash
 Copy code
 streamlit run app.py
-Replace app.py with the name of your Python script.
-
-Input Number of Songs:
-
+🎶 Analyze Songs
 Enter the number of top songs you want to analyze (between 1 and 20).
-Analyze Your Top Songs:
+The app will fetch your top songs and display their audio features.
+🎧 Get Recommendations
+View song recommendations based on audio features.
+Discover new artists based on the genres of your favorite tracks.
+💡 Code Highlights
+🎼 Top Song Extraction
+Fetches the user's top tracks and their audio features via the Spotify API.
+📊 Data Visualization
+Displays average audio features using bar charts for better insights.
+🔍 Recommendations
+Songs: Suggested based on average audio features like danceability and energy.
+Artists: Recommended based on genres in the user's top tracks.
+🖥️ Interactive Web Interface
+Built with Streamlit for a dynamic and user-friendly experience.
+🤝 Contributing
+💡 Feel free to fork the repository, open issues, or submit pull requests to enhance the project.
 
-The app will fetch your top songs, analyze their audio features, and display the results.
-View Recommendations:
+📜 License
+This project is open-source and licensed under the MIT License.
 
-The app provides personalized song and artist recommendations based on your listening habits.
-Code Explanation
-Extract Users' Top Songs: The Extract_users_top_songs function retrieves the user's top tracks and their audio features using the Spotify API.
+🎵 Explore your favorite music and discover new tracks that match your vibe! 🎶
 
-Create DataFrame: The create_Data_frame function constructs a DataFrame with the retrieved audio features and prepares a playlist of the top songs.
 
-Analysis: The Analysis function calculates average audio features of the user's top songs and visualizes them using bar charts.
 
-Recommendations:
 
-song_recommendations provides song recommendations based on audio feature averages.
-artist_recommendations suggests new artists based on the genres of songs the user listens to.
-Web Interface: The create_webpage function sets up the Streamlit interface for user interaction.
+
+
+
+You’ve
